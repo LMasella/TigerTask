@@ -1,0 +1,24 @@
+.todos h2 {
+    font-size: 28px;
+}
+
+.loader-container {
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.current-category {
+    cursor: help;
+    border-bottom: 1px dotted black;
+}
+
+#category-tooltip {
+    position: absolute;
+    visibility: hidden;
+    padding: 1rem;
+    background-color: #252422dd;
+    color: #FFFCF2;
+    margin-top: .75rem;
+    border-radius: 5px;
+    z-index: 2;
+}

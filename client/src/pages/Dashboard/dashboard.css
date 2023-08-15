@@ -1,0 +1,14 @@
+.dashboard-container {
+    min-height: calc(100% - 80px);
+    padding: 0 120px;
+    margin-top: 20px;
+}
+
+.dashboard {
+    width: 100%;
+    padding: 1.5rem 2.5rem;
+}
+
+.dashboard h1 {
+    font-size: 38px;
+}

@@ -1,0 +1,54 @@
+.todo {
+    max-width: 1000px;
+    margin: 1rem;
+    border: 1px solid #252422;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.link-container {
+    text-decoration: underline;
+    font-size: 32px;
+    margin-bottom: .2rem;
+    max-width: 700px;
+}
+
+.link-container p {
+    cursor: pointer;
+}
+
+.todo-content-header {
+    margin-bottom: .4rem;
+}
+
+.todo-content-info {
+    font-size: 22px;
+}
+
+.due-container {
+    font-size: 22px;
+    padding: 5px;
+}
+
+.buttons {
+    gap: 20px;
+}
+
+.overdue {
+    background-color: red;
+    border: 1px solid black;
+    color: #FFFCF2;
+    border-radius: 5px;
+}
+
+.bg-overdue {
+    background-color: #ffd3d3;
+}
+
+.bg-complete {
+    background-color: #d3ffd3;
+}
+
+.todo-content, .todo-content-info {
+    cursor: text;
+}

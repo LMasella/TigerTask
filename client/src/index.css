@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Leckerli+One&family=Rubik&family=Ubuntu&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #252422;
+  color: #FFFCF2;
+}
+
+.doneist h1 {
+    font-family: 'Leckerli One', cursive;
+}
+
+.doneist span {
+    font-family: 'Anton', sans-serif;
+    color: black;
+    letter-spacing: 3px;
+}
+
+/* GENERIC CLASSES */
+  .d-flex {
+    display: flex;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .align-center {
+    align-items: center;
+  }
+  .align-start {
+    align-items: flex-start;
+  }
+  .align-end {
+    align-items: flex-end;
+  }
+  .flex-column {
+    flex-direction: column;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-black {
+    color: black;
+  }
+
+/* END GENERIC CLASSES */
+.container {
+  padding: 0 120px;
+}
+
+.button-plain {
+  border: none;
+  background: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: start;
+  line-height: 1em;
+}
+
+.button-plain:hover {
+  color: #eb5e28;
+}
+
+.bg-1 {
+  background-color: #FFFCF2;
+}
+
+.color-1 {
+  color: #FFFCF2;
+}
+
+.bg-2 {
+  background-color: #ccc5b9;
+}
+
+.color-2 {
+  color: #ccc5b9;
+}
+
+.bg-3 {
+  background-color: #403d39;
+}
+
+.color-3 {
+  color: #403d39;
+}
+
+.bg-4 {
+  background-color: #252422;
+}
+
+.color-4 {
+  color: #252422;
+}
+
+.bg-5 {
+  background-color: #eb5e28;
+}
+
+.color-5 {
+  color: #eb5e28;
+}
+
+.cancel {
+  color: #aaaaaa;
+}
+
+.cancel:hover {
+  color: black;
+}
+.error {
+  color: red;
+}
+
+/* LOADER SPINNER */
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+  .white div {
+    border: 8px solid #eb5e28;
+    border-color: #eb5e28 transparent transparent transparent;
+  }
+  .black div {
+    border: 8px solid #eb5e28;
+    border-color: #eb5e28 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/* END LOADER SPINNER */

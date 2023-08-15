@@ -1,0 +1,22 @@
+.complete-button, .incomplete-button {
+    font-size: 28px;
+    margin: 15px 20px 0 0;
+    padding: 5px;
+    cursor: pointer;
+    border-color: #252422; 
+    transition: all 400ms;
+}
+
+.complete-button:hover, .incomplete-button {
+    background-color: green;
+    border-style: groove;
+    border-color: #fffcf2;
+    color: #FFFCF2;
+}
+
+.incomplete-button:hover {
+    background-color: #CCC5B9;
+    border-style: outset;
+    border-color: #252422;
+    color: black;
+}

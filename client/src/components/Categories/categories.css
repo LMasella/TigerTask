@@ -1,0 +1,31 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem 0 0;
+    background-color: inherit;
+    flex: 0 0 300px;
+}
+
+.categories button {
+    font-size: calc(18px + 1vh);
+}
+
+.categories-loader-container {
+    margin: 15vh auto;
+}
+
+.new-category {
+    padding: 5px;
+    background-color: #FFFCF2;
+    cursor: pointer;
+    transition: all 400ms;
+    margin-left: -6px;
+    margin-bottom: 1rem;
+}
+
+.new-category:hover {
+    background-color: #403d39;
+    color: #eb5e28;
+}

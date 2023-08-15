@@ -1,0 +1,25 @@
+.new-todo-button {
+    max-width: 1000px;
+    min-height: 214px;
+    margin: 1rem;
+    border: 1px solid #252422;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fffcf200;
+    font-size: 32px;
+    transition: background-color 1s, color 1s, opacity 1s;
+    color: #252422;
+    opacity: .66;
+    cursor: pointer;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.new-todo-button:hover {
+    color: #eb5e28;
+    background-color: #fffcf2ff;
+    opacity: 1;
+    text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+.welcome {
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.button-welcome {
+    font-size: inherit;
+    color: #EB5E28;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.button-welcome:hover {
+    text-decoration: underline;
+}
