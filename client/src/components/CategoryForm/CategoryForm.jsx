@@ -44,7 +44,7 @@ const CategoryForm = ({setAddCategory, setCurrentCategory, setCategories, handle
 
   return (
     <form className="category-form todo bg-1 color-3" onSubmit={submitHandler}>
-      <div className="d-flex justify-between align-center">
+      <div className="d-flex align-center">
         <div className="title-container">
           <input type='text' className="color-5" name='name' id='name' value={name} placeholder="Category Name" onChange={e => setName(e.target.value)} />
           {errors.name && <p style={{margin: '-1.1rem 0 1.1rem'}}><span className="error">{errors.name}</span></p>}

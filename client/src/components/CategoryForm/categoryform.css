@@ -21,3 +21,9 @@
     font-size: 16px;
     margin-top: .5rem;
 }
+
+@media screen and (max-width: 620px) {
+    #name {
+        width: 100%;
+    }
+}
