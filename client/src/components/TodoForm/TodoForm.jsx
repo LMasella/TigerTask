@@ -110,20 +110,22 @@ const TodoForm = (props) => {
 
   return (
     <form className="todo bg-1 color-3" onSubmit={submitHandler}>
-      <div className="d-flex justify-between align-center">
+      <div className="todo-title-line">
         <div className="title-container">
           <input type='text' className="color-5" name='title' id='title' value={title} placeholder="Title" onChange={e => setTitle(e.target.value)} />
           {errors.title && <span className="error">{errors.title}</span>}
         </div>
-        <div className="due-form-container color-4">
-          <label htmlFor='dueDate'>Due:<br />At:</label>
-          <input type='datetime-local' name='dueDate' id='dueDate' value={dueDate} onChange={e => setDueDate(e.target.value)} />
-          {errors.dueDate && <span className="error">{errors.dueDate}</span>}
+        <div className="d-flex flex-column">
+          <div className="due-form-container color-4">
+            <label htmlFor='dueDate'>Due:</label>
+            <input type='datetime-local' name='dueDate' id='dueDate' value={dueDate} onChange={e => setDueDate(e.target.value)} />
+          </div>
+        {errors.dueDate && <div><span className="error">{errors.dueDate}</span></div>}
         </div>
       </div>
       <div className="todo-content">
         <div className="todo-content-header">
-        <p>Posted by {localStorage.getItem('name')}</p>
+        <p>Posted by {props.createdBy ? props.createdBy.name : localStorage.getItem('name')}</p>
         <label htmlFor='assignedTo'>Assigned to </label>
         <select name='assignedTo' id='assignedTo' value={assignedTo} onChange={e => setAssignedTo(e.target.value)}>
             <option value='' disabled hidden>Assign to User...</option>

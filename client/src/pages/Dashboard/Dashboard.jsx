@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useCallback } from 'react';
-import { Todos, Categories, Filters, CategoryForm, Welcome } from '../../components';
+import { Todos, Categories, Filters, CategoryForm, Welcome, Header } from '../../components';
 import './dashboard.css';
 import axios from 'axios';
 
@@ -11,9 +11,11 @@ const Dashboard = ({currentCategory, setCurrentCategory, currentFilters, setCurr
   const [editForm, setEditForm] = useState(null);
   const [categories, setCategories] = useState([]);
   const [addCategory, setAddCategory] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleCategoryClick = useCallback(cat => {
     setAddCategory(false);
+    setToggleMenu(false);
     setEditForm(null);
     setTodosLoading(true);
     const catType = typeof cat;
@@ -38,30 +40,33 @@ const Dashboard = ({currentCategory, setCurrentCategory, currentFilters, setCurr
   }, []);
 
   return (
-    <div className="d-flex dashboard-container">
-      <Categories categories={categories} setCategories={setCategories} currentCategory={currentCategory} handleCategoryClick={handleCategoryClick} setAddCategory={setAddCategory} />
-      <div className="dashboard bg-2 color-4">
-        { addCategory ?
-          <>
-            <h1>Add New Category:</h1>
-            <CategoryForm setAddCategory={setAddCategory} setCurrentCategory={setCurrentCategory} setCategories={setCategories} handleCategoryClick={handleCategoryClick} />
-          </>
-          :
-          <>
-            <h1>Dashboard:</h1>
-            {/* <button onClick={() => setCurrentCategory('')}>Clear category</button> */}
-            {!currentCategory ?
-              <Welcome setAddCategory={setAddCategory} />
-              :
-              <>
-                <Filters todos={todos} setFilteredTodos={setFilteredTodos} filters={currentFilters} setFilters={setCurrentFilters} />
-                <Todos todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} currentCategory={currentCategory} todosLoading={todosLoading} setTodosLoading={setTodosLoading} handleCategoryClick={handleCategoryClick} editForm={editForm} setEditForm={setEditForm} setCategories={setCategories} setCurrentCategory={setCurrentCategory} />
-              </>
-            }
-          </>
-        }
+    <>
+      <Header setCurrentCategory={setCurrentCategory} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+      <div className="d-flex dashboard-container">
+        <Categories categories={categories} setCategories={setCategories} currentCategory={currentCategory} handleCategoryClick={handleCategoryClick} setAddCategory={setAddCategory} toggleMenu={toggleMenu} />
+        <div className="dashboard bg-2 color-4">
+          { addCategory ?
+            <>
+              <h1>Add New Category:</h1>
+              <CategoryForm setAddCategory={setAddCategory} setCurrentCategory={setCurrentCategory} setCategories={setCategories} handleCategoryClick={handleCategoryClick} />
+            </>
+            :
+            <>
+              <h1>Dashboard:</h1>
+              {/* <button onClick={() => setCurrentCategory('')}>Clear category</button> */}
+              {!currentCategory ?
+                <Welcome setAddCategory={setAddCategory} />
+                :
+                <>
+                  <Filters todos={todos} setFilteredTodos={setFilteredTodos} filters={currentFilters} setFilters={setCurrentFilters} />
+                  <Todos todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} currentCategory={currentCategory} todosLoading={todosLoading} setTodosLoading={setTodosLoading} handleCategoryClick={handleCategoryClick} editForm={editForm} setEditForm={setEditForm} setCategories={setCategories} setCurrentCategory={setCurrentCategory} />
+                </>
+              }
+            </>
+          }
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

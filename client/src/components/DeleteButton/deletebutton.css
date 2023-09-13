@@ -13,3 +13,9 @@
     border-color: #fffcf2;
     color: #FFFCF2;
 }
+
+@media screen and (max-width: 620px) {
+    .delete-button {
+        font-size: 22px;
+    }
+}

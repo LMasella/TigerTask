@@ -6,7 +6,7 @@
 }
 
 .filter-label {
-    margin-left: -1.2rem;
+    margin-left: 1rem;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -79,3 +79,11 @@
     background-color: #eb5e28;
   }
 /* END CUSTOM CHECKBOX */
+
+@media screen and (max-width: 620px) {
+  .filters {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .9rem;
+  }
+}

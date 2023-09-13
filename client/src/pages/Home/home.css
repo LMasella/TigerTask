@@ -32,3 +32,20 @@
     font-weight: 800;
     margin-top: 1.5rem;
 }
+@media screen and (max-height: 620px) {
+    .home-container {
+        padding: 5px;
+    }
+    .home-content {
+        padding: .9rem 2rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .home-container {
+        padding: 0;
+    }
+    .home-content {
+        height: 100%;
+    }
+}

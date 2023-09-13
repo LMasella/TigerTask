@@ -20,7 +20,7 @@ body {
     font-family: 'Leckerli One', cursive;
 }
 
-.doneist span {
+.tiger {
     font-family: 'Anton', sans-serif;
     color: black;
     letter-spacing: 3px;
@@ -54,14 +54,14 @@ body {
   .text-center {
     text-align: center;
   }
+  .text-right {
+    text-align: right;
+  }
   .text-black {
     color: black;
   }
 
 /* END GENERIC CLASSES */
-.container {
-  padding: 0 120px;
-}
 
 .button-plain {
   border: none;
@@ -125,6 +125,7 @@ body {
   color: black;
 }
 .error {
+  font-size: 1rem;
   color: red;
 }
 

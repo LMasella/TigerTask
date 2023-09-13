@@ -37,7 +37,6 @@ const createCategory = asyncHandler(async (req, res) => {
 // @access  Private
 const getAllCategories = asyncHandler(async (req, res) => {
     const categories = await Category.find();
-    console.log(req.user);
     if (categories) {
         res.status(201).json(categories);
     } else {

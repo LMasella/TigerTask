@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { CompleteButton, DeleteButton } from '../'
 import './todo.css';
 
@@ -28,13 +27,13 @@ const Todo = ({_id, title, information, dueDate, createdBy, assignedTo, complete
 
   return (
     <div className={backgroundStyle()} key={_id}>
-      <div className="d-flex justify-between align-start">
+      <div className="todo-title-line">
         <div className="link-container color-5">
           <p className="color-5" onClick={() => setEditForm(_id)}>{title}</p>
         </div>
         <div className={!completed && overdue ? "due-container overdue" : "due-container color-4"}>
           <p className="due-date">Due: {date}</p>
-          <p className="due-time">At: {time}</p>
+          <p className="due-time text-right">{time}</p>
         </div>
       </div>
       <div className="todo-content">

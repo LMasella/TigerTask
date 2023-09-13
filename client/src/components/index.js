@@ -12,6 +12,7 @@ import NewTodoButton from './NewTodoButton/NewTodoButton';
 import CategoryForm from './CategoryForm/CategoryForm';
 import Welcome from './Welcome/Welcome';
 import DeleteCategoryButton from './DeleteCategoryButton/DeleteCategoryButton';
+import CategoryMenuButton from './CategoryMenuButton/CategoryMenuButton';
 
 export {
     Categories,
@@ -27,5 +28,6 @@ export {
     NewTodoButton,
     CategoryForm,
     Welcome,
-    DeleteCategoryButton
+    DeleteCategoryButton,
+    CategoryMenuButton
 }

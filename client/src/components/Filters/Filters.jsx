@@ -33,18 +33,24 @@ const Filters = ({todos, setFilteredTodos, filters, setFilters}) => {
   return (
     <div className="filters">
         <h3>Filters:</h3>
-        <div className="checkbox-wrapper-2">
-            <input id="completed" type='checkbox' className="ikxBAC" checked={filters.completed} onChange={e => handleFilterChange('completed', e.target.checked)} />
+        <div className="d-flex">
+            <div className="checkbox-wrapper-2">
+                <input id="completed" type='checkbox' className="ikxBAC" checked={filters.completed} onChange={e => handleFilterChange('completed', e.target.checked)} />
+            </div>
+            <label className="filter-label" htmlFor="completed">show completed tasks</label>
         </div>
-        <label className="filter-label" htmlFor="completed">show completed tasks</label>
-        <div className="checkbox-wrapper-2">
-            <input id="creator" type='checkbox' className="ikxBAC" checked={filters.createdBy} onChange={e => handleFilterChange('createdBy', e.target.checked)} />
+        <div className="d-flex">
+            <div className="checkbox-wrapper-2">
+                <input id="creator" type='checkbox' className="ikxBAC" checked={filters.createdBy} onChange={e => handleFilterChange('createdBy', e.target.checked)} />
+            </div>
+            <label className="filter-label" htmlFor="creator">created by me</label>
         </div>
-        <label className="filter-label" htmlFor="creator">created by me</label>
-        <div className="checkbox-wrapper-2">
-            <input id="assignee" type='checkbox' className="ikxBAC" checked={filters.assignedTo} onChange={e => handleFilterChange('assignedTo', e.target.checked)} />
+        <div className="d-flex">
+            <div className="checkbox-wrapper-2">
+                <input id="assignee" type='checkbox' className="ikxBAC" checked={filters.assignedTo} onChange={e => handleFilterChange('assignedTo', e.target.checked)} />
+            </div>
+            <label className="filter-label" htmlFor="assignee">assigned to me</label>
         </div>
-        <label className="filter-label" htmlFor="assignee">assigned to me</label>
     </div>
   )
 }

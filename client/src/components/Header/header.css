@@ -5,20 +5,6 @@
     padding: 0 120px;
 }
 
-.header-link {
-    text-decoration: none;
-    margin-left: 2rem;
-    color: inherit;
-}
-
-.header-link:first-child {
-    margin-left: 0;
-}
-
-.header-link:hover {
-    color: #252422;
-}
-
 .branding {
     flex: 0 0 300px;
     font-size: 18px;
@@ -30,4 +16,29 @@
 
 .nav-right {
     gap: 2rem;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    .header {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .header {
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+    .nav {
+        width: auto;
+    }
+    .branding {
+        flex-basis: auto;
+        font-size: 16px;
+    }
+    .header-welcome {
+        display: none;
+    }
 }

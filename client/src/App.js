@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom';
 import { PrivateRoute } from './components';
-import { Home, Login, Profile, Dashboard } from './pages';
+import { Home, Login, Dashboard } from './pages';
 
 function App() {
   const [currentCategory, setCurrentCategory] = useState('');
@@ -17,11 +17,9 @@ function App() {
       <Route path='/' element={<Outlet />}>
         <Route index={true} path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        {/* <Route path='/register' element={<Register />} /> */}
   
         {/* Private Routes */}
         <Route path='' element={ <PrivateRoute setCurrentCategory={setCurrentCategory} /> }>
-          {/* <Route path='/profile' element={<Profile />} /> */}
           <Route path='/dashboard' element={<Dashboard currentCategory={currentCategory} setCurrentCategory={setCurrentCategory} currentFilters={currentFilters} setCurrentFilters={setCurrentFilters} />} />
         </Route>
       </Route>

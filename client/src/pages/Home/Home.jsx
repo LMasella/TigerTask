@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Login } from '../';
 import './home.css';
 
@@ -11,7 +11,7 @@ const Home = () => {
       <div className="home-content bg-5 d-flex flex-column justify-start">
         <div className="d-flex flex-column justify-center align-center">
           <div className="doneist">
-          <h1><span>TIGER</span>Task</h1>
+          <h1><span className="tiger">TIGER</span>Task</h1>
           </div>
           <Login />
         </div>

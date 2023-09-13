@@ -52,3 +52,24 @@ margin-right: 3rem;
     padding: 5px 10px;
     font-size: 16px;
 }
+
+@media screen and (max-width: 620px) {
+    .todo input, .todo textarea, .todo select {
+        margin-bottom: .5rem;
+    }
+    .form-buttons {
+        margin-top: 1.5rem;;
+    }
+    #assignedTo {
+        margin-top: .5rem;
+    }
+    .due-form-container {
+        font-size: 18px;
+    }
+    #title {
+        font-size: 28px;
+    }
+    #information {
+        font-size: 20px;
+    }
+}

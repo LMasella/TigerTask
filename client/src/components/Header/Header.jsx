@@ -1,18 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Logout } from '../';
+import { Logout, CategoryMenuButton } from '../';
 import './header.css';
 
-const Header = ({setCurrentCategory}) => {
+const Header = ({setCurrentCategory, toggleMenu, setToggleMenu}) => {
   return (
     <div className="header bg-5">
+      <CategoryMenuButton toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
       <div className="branding doneist">
-        <h1><span>TIGER</span>Task</h1>
+        <h1><span className="tiger">TIGER</span>Task</h1>
       </div>
-      <div className="nav d-flex justify-between">
-        <Link className="header-link" to='/dashboard'>Dashboard</Link>
+      <div className="nav d-flex justify-end">
         <div className="d-flex nav-right">
-          <p>Welcome, <span className="color-4">{localStorage.getItem('name')}</span>!</p>
+          <p className="header-welcome">Welcome, <span className="color-4">{localStorage.getItem('name')}</span>!</p>
           <Logout setCurrentCategory={setCurrentCategory} />
         </div>
       </div>

@@ -1,0 +1,9 @@
+.material-symbols-outlined {
+    display: none;
+}
+
+@media screen and (max-width: 620px) {
+    .material-symbols-outlined {
+        display: block;
+    }
+}

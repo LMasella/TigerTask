@@ -25,9 +25,17 @@
     font-size: 22px;
 }
 
+.todo-title-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .due-container {
     font-size: 22px;
     padding: 5px;
+    border: 1px solid #252422;
+    border-radius: 5px;
 }
 
 .buttons {
@@ -36,9 +44,8 @@
 
 .overdue {
     background-color: red;
-    border: 1px solid black;
     color: #FFFCF2;
-    border-radius: 5px;
+
 }
 
 .bg-overdue {
@@ -51,4 +58,24 @@
 
 .todo-content, .todo-content-info {
     cursor: text;
+}
+
+@media screen and (max-width: 620px) {
+    .todo {
+        margin: 1rem 0;
+    }
+    .todo-title-line {
+        flex-direction: column;
+        gap: .6rem;
+        margin-bottom: .6rem;
+    }
+    .due-container {
+        font-size: 18px;
+    }
+    .link-container {
+        font-size: 28px;
+    }
+    .todo-content-info {
+        font-size: 20px;
+    }
 }

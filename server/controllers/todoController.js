@@ -7,8 +7,6 @@ import Todo from '../models/todoModel.js';
 const createTodo = asyncHandler(async (req, res) => {
     const { title, information, category, dueDate, createdBy, assignedTo } = req.body;
 
-    console.log('category:' + category);
-
     const newTodo = await Todo.create({
         title,
         information,

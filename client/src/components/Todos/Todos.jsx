@@ -22,7 +22,7 @@ const Todos = ({todos, setTodos, filteredTodos, currentCategory, todosLoading, s
             <>
               <div className="d-flex align-center">
                 <h2><span className="current-category color-5" onMouseEnter={tooltipHover} onMouseLeave={tooltipUnhover }>{currentCategory.name}</span> Tasks:</h2>
-                <button style={{marginLeft: "1rem", fontSize: "14px"}} className="button-plain" onClick={() => setEditForm('new')}>Quick Add +</button>
+                <button style={{marginLeft: "1.5rem", fontSize: "18px"}} className="button-plain" onClick={() => setEditForm('new')}>Quick Add +</button>
                 <DeleteCategoryButton _id={currentCategory._id} setCategories={setCategories} show={todos.length === 0} setCurrentCategory={setCurrentCategory} />
               </div>
               <div id="category-tooltip">
@@ -32,8 +32,8 @@ const Todos = ({todos, setTodos, filteredTodos, currentCategory, todosLoading, s
           }
           {filteredTodos.map((todo) => {
               return (
-                todo._id == editForm ?
-                  <TodoForm key={todo._id} id={todo._id} title={todo.title} information={todo.information} category={currentCategory} dueDate={todo.dueDate} assignedTo={todo.assignedTo} create={false} setEditForm={setEditForm} handleCategoryClick={handleCategoryClick} />
+                todo._id === editForm ?
+                  <TodoForm key={todo._id} id={todo._id} title={todo.title} information={todo.information} category={currentCategory} dueDate={todo.dueDate} assignedTo={todo.assignedTo} createdBy={todo.createdBy} create={false} setEditForm={setEditForm} handleCategoryClick={handleCategoryClick} />
                   :
                   <Todo key={todo._id} _id={todo._id} title={todo.title} information={todo.information} dueDate={todo.dueDate} createdBy={todo.createdBy} assignedTo={todo.assignedTo} completed={todo.completed} todos={todos} setTodos={setTodos} setTodosLoading={setTodosLoading} setEditForm={setEditForm} />
                   );
